@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Dan Ahmed">
+  <meta name="description" content="This page contains all advising writings created by the authors.">
+ 
+<title>TIPS</title>
+</head>
+
+  <body bgcolor=gray>
+
+ <font color = #000000  size=30>
+  <p>
+<img src="https://scontent.fjed2-2.fna.fbcdn.net/v/t39.30808-6/481072954_553796387821317_2156729352440454709_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e1afaa&_nc_ohc=hoi9H8Pgj_gQ7kNvgF0yBgH&_nc_oc=AdgYtjPUdn8DcXA2dPR7c0qNotth4wAQweIoz8y36VYbTvHcfrDdWlp7HK8q42p2wWeaX6kY89LmLdYVwz4dFA2D&_nc_zt=23&_nc_ht=scontent.fjed2-2.fna&_nc_gid=J_2adgeF_5mrjPrLd_hbgQ&oh=00_AYGXk102Bmdv1wA5UvB3E4D4eJEXFOTQWIpVp0rZDScfkQ&oe=67DBBD7B"></a>
+ <center> <h1>TIPS</h1> </center><br>
+ <center> <font size=40> Transform Your Life with the Best Advice Books</h1> </center><br></font> </center>
+  </p>
+   <p>
+     <left>
+     <font color =black>
+       <h2>About Us</h2>
+     </left>
+ </font>
+ <p style="text-align: right;">
+ <img src=https://scontent.fjed2-2.fna.fbcdn.net/o1/v/t0/f2/m340/AQPyvqbLaoq2gMcNQbIB3xFOG6CR0o_Pgf1SYvZSng1Z01a5rGvw6-I_6pra8JS-MYC6vTHzTwFqyOQgJiEjO6uLnlmop8geeugZxzm8H_pdlHe4eqs8q5zaB2Uc2Jg35iCIBJZyzJ80DOSTpnuAyzJnpZdb5Q.jpeg?_nc_ht=scontent.fjed2-2.fna.fbcdn.net&_nc_cat=107&_nc_oc=AdgmPjsE3SEv91EBw6BHZZsu0_0LnqpEC-K17bXeATOhpQCaYffI61L4lpkSh5f5YZI&ccb=9-4&oh=00_AYH5FBSt9_gPkgWpDpNiqn2zF6NY_2-1Xn57gWu-bKaccg&oe=67D8B362&_nc_sid=5b3566 width=300 length=350>
+     
+     <font color =black>
+       <left>
+       <p style="font-size:40px;">Tips is a website with advice texts. We made this website to help you improve your daily activities. Whenever you are bored, visit our website. You are welcome at any time. Thank you for visiting our website!</p>
+     </left>
+  
+
+      </font>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Register For Free</h1>
+    </header>
+    <main>
+        <form id="registration-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password"><br><br>
+            <input type="submit" value="Register">
+        </form>
+    </main>
+    <script>
+        
+        const registrationForm = document.getElementById('registration-form');
+
+       
+        registrationForm.addEventListener('submit', registerUser);
+
+       
+        function registerUser(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            
+            if (username === '' || email === '' || password === '' || confirmPassword === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            
+            window.location.href = 'tipsfiles.html';
+        }
+    </script>
+</body>
+</html>
