@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIPS - Register</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: white;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 1rem;
+  }
+
+  form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #0072ff;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  form input:focus {
+    border-color: #0072ff;
+    box-shadow: 0 0 5px rgba(0, 114, 255, 0.3);
+  }
+
+  form input[type="submit"] {
+    width: 100%;
+    background: #ffcc00;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  form input[type="submit"]:hover {
+    background: #ffb300;
+    transform: scale(1.02);
+  }
+
+  footer {
+    text-align: center;
+    background: #004080;
+    color: white;
+    padding: 1rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Register For Free</h1>
+</header>
+
+<main>
+  <form id="registration-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password">
+
+    <input type="submit" value="Register">
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 TIPS. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const registrationForm = document.getElementById('registration-form');
+
+  registrationForm.addEventListener('submit', registerUser);
+
+  function registerUser(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+    if (!username || !email || !password || !confirmPassword) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+
+    alert('Registration successful!');
+    window.location.href = 'home.html';
+  }
+</script>
+
+</body>
+</html>
