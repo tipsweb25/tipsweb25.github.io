@@ -1,159 +1,275 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Dan Ahmed">
-  <meta name="description" content="This page contains all advising writings created by the authors.">
-  <link rel="icon" href="https://files.cdn-files-a.com/uploads/10510923/2000_67fa4ed6a3792.jpg" width=120 length=160 type="image/x-icon">
-  <title>TIPS</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIPS - Transform Your Life</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fefefe;
+    color: #333;
+  }
+   header {
+      background: linear-gradient(90deg, #a8703a, #d9a066);
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      width: 100px;
+      border-radius: 8px;
+    }
+  nav {
+    background: #004080;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+  nav a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 1.5rem;
+  }
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .intro h2 {
+    color: #0072ff;
+  }
+  .tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .tip {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .signup {
+    background: #0072ff;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  .signup input, .signup button {
+    padding: 0.7rem;
+    margin: 0.3rem;
+    border: none;
+    border-radius: 4px;
+  }
+  .signup input {
+    width: 200px;
+  }
+  .signup button {
+    background: #ffcc00;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  footer {
+    text-align: center;
+    background: #004080;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+   body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: #333;
+  }
 
-  <body bgcolor=#a8703a>
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: white;
+  }
 
- <font color = #000000  size=30>
-  
-<img src="https://files.cdn-files-a.com/uploads/10510923/2000_67fa4ed6a3792.jpg" width=120 length=160> 
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 
-	 <center> <h1>TIPS</h1> </center><br>
-<center> <img src="https://files.cdn-files-a.com/uploads/10510923/2000_67fa4a467d08c.jpg" width=200 length=250> </center>
-	 <center>  Transform Your Life With The Best Advice Books </center>
- 
-  
-   
-     
-     <font color =black>
-       <h2>About Us</h2>
-     
- </font>
- <p style="text-align: right;">
- <img src="https://files.cdn-files-a.com/uploads/10510923/2000_67fa41fb88d4f.jpg" width=300 length=350> 
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 1rem;
+  }
 
-       
-       <p> Tips is a website with advice texts. We made this website to help you improve your daily activities. Whenever you are bored, visit our website. You are welcome anytime. Thank you for visiting our website!</p>
+  form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 0.8s ease-in-out;
+  }
 
-       
-  <p> <h2> Contact us: </h2>
-	<br>
-	  On Whatsapp: +966558815841 <img src="https://files.cdn-files-a.com/uploads/10510923/2000_67fa632504a20.png" width= 150 length=200>
-  </p>
+  form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #0072ff;
+  }
 
-      
-   <br>
-   <br>
-   <br>
-   <br>
-   
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+  form input:focus {
+    border-color: #0072ff;
+    box-shadow: 0 0 5px rgba(0, 114, 255, 0.3);
+  }
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2em;
-        }
+  form input[type="submit"] {
+    width: 100%;
+    background: #ffcc00;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-        form {
-            border: 1px solid #ccc;
-            padding: 1em;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+  form input[type="submit"]:hover {
+    background: #ffb300;
+    transform: scale(1.02);
+  }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
+  footer {
+    text-align: center;
+    background: #004080;
+    color: white;
+    padding: 1rem;
+  }
 
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: 100%;
-            height: 40px;
-            margin-bottom: 20px;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            height: 40px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #555;
-        }
-    </style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Register For Free</h1>
-    </header>
-    <main>
-        <form id="registration-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password"><br><br>
-            <input type="submit" value="Register">
-        </form>
-    </main>
-    <script>
-        
-        const registrationForm = document.getElementById('registration-form');
 
-       
-        registrationForm.addEventListener('submit', registerUser);
+<header>
+  <img src="https://files.cdn-files-a.com/uploads/10510923/2000_67fa4ed6a3792.jpg" alt="TIPS Logo">
+  <h1>Welcome to TIPS</h1>
+  <p>Transform Your Life with Advice, Books & Audios</p>
+</header>
 
-       
-        function registerUser(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="signin.html">Tips</a>
+  <a href="social.html">Social</a>
+</nav>
 
-            
-            if (username === '' || email === '' || password === '' || confirmPassword === '') {
-                alert('Please fill in all fields.');
-                return;
-            }
+<div class="container">
+  <section class="intro">
+    <h2>Welcome to TIPS</h2>
+    <p>We share bite-sized advice to improve your daily life. Whenever you need inspiration, we’re here.</p>
+  </section>
 
-            if (password !== confirmPassword) {
-                alert('Passwords do not match.');
-                return;
-            }
+  <section class="tips">
+    <div class="tip">
+      <h3>Start Your Day Right</h3>
+      <p>Spend 5 minutes in the morning listing three things you’re grateful for.</p>
+    </div>
+    <div class="tip">
+      <h3>Stay Hydrated</h3>
+      <p>Drink at least 8 glasses of water a day to keep your mind and body energized.</p>
+    </div>
+    <div class="tip">
+      <h3>Take Breaks</h3>
+      <p>Every hour, step away from your work to recharge your focus.</p>
+    </div>
+  </section>
 
-            
-            window.location.href = 'Index.html';
-        }
-    </script>
-</body>
-		
+  <center>
+  <h1>Register For Free</h1></center>
+
+
+<main>
+  <form id="registration-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password">
+
+    <input type="submit" value="Register">
+  </form>
+</main>
+
 <footer>
-  <font color =black>
-    <p style="font-size:20px;">TIPS
-	<br>
-	
-Copyright © 2025 All rights reserved
-<br>
-Powered By HTML
-    </p>
+  <p>&copy; 2025 TIPS. All Rights Reserved.</p>
 </footer>
+
+<script>
+  const registrationForm = document.getElementById('registration-form');
+
+  registrationForm.addEventListener('submit', registerUser);
+
+  function registerUser(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+    if (!username || !email || !password || !confirmPassword) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+
+    alert('Registration successful!');
+    window.location.href = 'home.html';
+  }
+</script>
+
+</body>
+
+
+
+</body>
 </html>
